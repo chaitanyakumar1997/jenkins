@@ -1,12 +1,12 @@
 node {
     stage("git clone"){
-	   sh 'pwd'
+	   sh 'clear'
 	}
 	stage('maven'){
-	    sh 'mkdir hello'
+	    sh 'unmane'
 	}
 	stage("Deploy docker") {
-	     sh 'rm -rf hello'
+	     sh 'pwd'
         }	
         stage("K8s"){
 	     sh 'kubectl get pod'
