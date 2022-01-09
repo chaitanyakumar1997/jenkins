@@ -1,0 +1,15 @@
+node {
+    stage("git clone"){
+	   sh 'pwd'
+	}
+	stage('maven'){
+	    sh 'mkdir hello'
+	}
+	stage("Deploy docker") {
+	     sh 'rm -rf hello'
+        }	
+        stage("K8s"){
+	     sh 'kubectl get pod'
+             echo 'hellow'
+	}	
+}
